@@ -1,0 +1,139 @@
+@font-face {
+    font-family: Norse-Bold;
+    src: url("fonts/Norse-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Norse-Bold;
+    font-weight: bold;
+    src: url("fonts/Norse-Bold.otf") format("opentype");
+}
+
+:root{
+    --primaryClr: white;
+    --secondaryClr: black;
+    --thirdClr: coral;
+}
+
+*{
+    margin: 0
+}
+
+body{
+    background-color: var(--secondaryClr);
+}
+
+.main{
+    display: flex;
+    height: 100vh;
+    margin: 0 30px 0 30px;
+}
+
+.leftside{
+    background-image: url("img/SAO-JOSE-DOS-CAMPOS.png");
+    background-size: cover;
+}
+
+.leftside,
+.section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40vw;
+}
+
+.section{
+    background-color: var(--secondaryClr);
+    padding: 10px;
+    opacity: .5;
+}
+
+
+h1{
+    font-family: Norse-Bold;
+    font-size: 80px;
+    color: var(--primaryClr);
+}
+
+.rightside{
+    width: 60vw;
+    font-size: 20px;
+    padding: 50px;
+    background: var(--primaryClr);
+    padding-right: 150px;
+}
+
+.rightside p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px 0 10px 0;
+    font-weight: bold;  
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0 20px 0;
+}
+
+.inputSection{
+    display: flex;
+    flex-direction: column;
+    height: 260px;
+    flex-wrap: wrap;
+    font-size: 16px;
+}
+
+.inputSection>div{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0 20px 0;
+}
+
+input{
+    width: 250px;
+    height: 25px;
+    border-radius: 5px;
+    border: solid 1px lightgray;
+    outline: none;
+}
+
+input:focus{
+    border-color: blue;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+input[name="password"]:invalid{
+    border-color: red;
+}
+
+input[name="password"]:valid{
+    border-color: green;
+}
+
+button{
+    background: var(--thirdClr);
+    color: var(--primaryClr);
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.btnSection>p{
+    font-size: 16px;
+}
+
+a{
+    color: var(--thirdClr);
+    text-decoration: none;
+}
+
+label{
+    font-size: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#passwordValidation{
+    font-style: italic;
+    font-size: 14px;
+}
